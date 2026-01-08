@@ -10,3 +10,12 @@ Express yourself with fun and engaging short videos. Capture your best moments, 
 
 🔹 Real-Time Updates & Conversations
 Share your thoughts instantly, join trending discussions, and connect with people worldwide. From status updates to live conversations, Showa makes it easy to stay in the loop and be part of the global conversation while still connecting deeply with your local community.
+
+🔹 Built-In Business Tools
+Showa isn’t just for personal use—it’s also built to help entrepreneurs and businesses grow. You can showcase products, manage customer chats, and run promotions all within the app. Switch to business mode to access powerful tools that let you connect with customers and build your brand without leaving the platform.
+
+🔹 Groups, Communities & Networking
+Join group chats, create communities, or connect with like-minded people. Whether it’s friends, fans, or customers, Showa helps you build networks that matter.
+
+🔹 Privacy & Security
+Your conversations and data are protected with strong security measures. Showa prioritizes user privacy, ensuring that you stay in control of your personal and business interactions.
