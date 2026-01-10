@@ -24,16 +24,119 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	
+	<!-- Fonts for vector icons -->
+	<key>UIAppFonts</key>
+	<array>
+		<string>Ionicons.ttf</string>
+		<string>MaterialIcons.ttf</string>
+		<string>MaterialCommunityIcons.ttf</string>
+		<string>FontAwesome.ttf</string>
+		<string>FontAwesome5_Brands.ttf</string>
+		<string>FontAwesome5_Regular.ttf</string>
+		<string>FontAwesome5_Solid.ttf</string>
+		<string>FontAwesome6_Solid.ttf</string>
+		<string>Fontisto.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>Octicons.ttf</string>
+		<string>SimpleLineIcons.ttf</string>
+		<string>Zocial.ttf</string>
+		<string>AntDesign.ttf</string>
+		<string>Entypo.ttf</string>
+		<string>EvilIcons.ttf</string>
+		<string>Feather.ttf</string>
+	</array>
+	
+	<!-- Camera Permissions -->
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs camera access to take photos and videos.</string>
+	
+	<!-- Microphone Permissions -->
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app needs microphone access for audio recording and voice messages.</string>
+	
+	<!-- Photo Library Permissions -->
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app needs photo library access to upload photos and videos.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app needs permission to save photos to your library.</string>
+	
+	<!-- Contacts Permissions -->
+	<key>NSContactsUsageDescription</key>
+	<string>This app needs contacts access to find friends and connect with people you know.</string>
+	
+	<!-- Location Permissions -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app needs location access to show nearby users and location-based features.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app needs location access in background for location-based features.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app needs location access in background for location-based features.</string>
+	
+	<!-- Background Modes (if needed for services) -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>location</string>
+		<string>bluetooth-central</string>
+		<string>bluetooth-peripheral</string>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+	
+	<!-- Local Network Permissions (for Bluetooth discovery) -->
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>This app needs local network access to discover nearby devices.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_showaservice._tcp</string>
+		<string>_showaservice._udp</string>
+	</array>
+	
+	<!-- Face ID/Touch ID Permissions -->
+	<key>NSFaceIDUsageDescription</key>
+	<string>This app uses Face ID/Touch ID for secure authentication.</string>
+	
+	<!-- Audio Session Permissions -->
+	<key>UIAudioSessionCategory</key>
+	<string>playback</string>
+	<key>UIAudioSessionCategoryOptions</key>
+	<array>
+		<string>mixWithOthers</string>
+	</array>
+	
+	<!-- Network Security -->
 	<key>NSAppTransportSecurity</key>
 	<dict>
-	  <!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->
 		<key>NSAllowsArbitraryLoads</key>
 		<false/>
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>https://showapp.ng</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSTemporaryExceptionMinimumTLSVersion</key>
+				<string>TLSv1.1</string>
+			</dict>
+		</dict>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	
+	<!-- Bluetooth Permissions (add these if you use Bluetooth) -->
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This app needs Bluetooth access for connecting with devices and sharing features.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>This app needs Bluetooth access for connecting with devices.</string>
+	
+	<!-- New Architecture -->
+	<key>RCTNewArchEnabled</key>
+	<true/>
+	
+	<!-- App UI Settings -->
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

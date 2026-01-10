@@ -266,7 +266,8 @@ export default function SplashScreen() {
       if (profile?.name?.trim()) {
         return 'BusinessHome';
       } else {
-        return 'ProceedOptions';
+        // return 'ProceedOptions';
+        return 'Signin';
       }
     } catch (error) {
       return 'Signin';

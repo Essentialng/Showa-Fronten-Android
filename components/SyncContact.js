@@ -129,13 +129,14 @@
 //   }
 // };
 // contacts.js
+
 import Contacts from 'react-native-contacts';
 import { PermissionsAndroid, Platform } from 'react-native';
 import axios from 'axios';
 import { API_ROUTE } from '../api_routing/api';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import CryptoJS from 'crypto-js';
-import NetInfo from '@react-native-community/netinfo';
+//import NetInfo from '@react-native-community/netinfo';
 
 
 const normalizePhoneNumber = (phoneNumber) => {
@@ -174,15 +175,23 @@ const retryRequest = async (requestFn, maxRetries = 3, delay = 1000) => {
 };
 
 // Network checking
+
+// Network checking (NetInfo DISABLED)
 const checkNetworkConnection = async () => {
-  try {
-    const state = await NetInfo.fetch();
-    return state.isConnected && state.isInternetReachable;
-  } catch (error) {
-    console.error('Error checking network:', error);
-    return false;
-  }
+  // NetInfo removed/commented out
+  // Always assume device is online
+  return true;
 };
+
+// const checkNetworkConnection = async () => {
+//   try {
+//     const state = await NetInfo.fetch();
+//     return state.isConnected && state.isInternetReachable;
+//   } catch (error) {
+//     console.error('Error checking network:', error);
+//     return false;
+//   }
+// };
 
 // Request contacts permission
 export const requestContactsPermission = async () => {

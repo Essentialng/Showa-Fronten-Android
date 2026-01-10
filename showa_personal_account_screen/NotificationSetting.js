@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import PushNotification from 'react-native-push-notification';
+//import PushNotification from 'react-native-push-notification';
 
 const ContactProfile = ({ navigation }) => {
   const redirectToHomeChat = () => {
@@ -46,13 +46,14 @@ const ContactProfile = ({ navigation }) => {
   };
 
   const showTestNotification = () => {
-    PushNotification.localNotification({
-      channelId: 'showa-chat',
-      title: 'Notifications Enabled',
-      message: 'You will now receive notifications for new messages',
-      playSound: true,
-      soundName: 'default',
-    });
+    console.log('no noti for now');
+    // PushNotification.localNotification({
+    //   channelId: 'showa-chat',
+    //   title: 'Notifications Enabled',
+    //   message: 'You will now receive notifications for new messages',
+    //   playSound: true,
+    //   soundName: 'default',
+    // });
   };
 
   const toggleSwitch = async (key) => {

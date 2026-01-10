@@ -2388,7 +2388,7 @@ import SwitchAccountSheet from '../components/SwitchAccountSheet';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import LottieView from 'lottie-react-native';
 import IncomingCallModal from '../components/IncomingCallModal';
-import PushNotification from 'react-native-push-notification';
+//import PushNotification from 'react-native-push-notification';
 import NotificationService from '../src/services/PushNotifications';
 import Video from 'react-native-video';
 const windowWidth = Dimensions.get('window').width;
@@ -3074,28 +3074,28 @@ const checkForNewMessages = (newChats) => {
 // notificationListener.remove();
 // };
 // }, []);
-useEffect(() => {
-  PushNotification.configure({
-    onNotification: function (notification) {
-      console.log("NOTIFICATION:", notification);
-      // Check if user tapped the notification
-      if (notification.userInteraction && notification.data) {
-        handleNotificationTap(notification.data);
-      }
-      // iOS only
-      if (typeof notification.finish === "function") {
-        notification.finish();
-      }
-    },
-    permissions: {
-      alert: true,
-      badge: true,
-      sound: true,
-    },
-    popInitialNotification: true,
-    requestPermissions: Platform.OS === "ios",
-  });
-}, []);
+// useEffect(() => {
+//   PushNotification.configure({
+//     onNotification: function (notification) {
+//       console.log("NOTIFICATION:", notification);
+//       // Check if user tapped the notification
+//       if (notification.userInteraction && notification.data) {
+//         handleNotificationTap(notification.data);
+//       }
+//       // iOS only
+//       if (typeof notification.finish === "function") {
+//         notification.finish();
+//       }
+//     },
+//     permissions: {
+//       alert: true,
+//       badge: true,
+//       sound: true,
+//     },
+//     popInitialNotification: true,
+//     requestPermissions: Platform.OS === "ios",
+//   });
+// }, []);
 // useEffect(() => {
 // // Handle initial notification
 // PushNotification.popInitialNotification((notification) => {
@@ -3139,18 +3139,18 @@ const handleNotificationTap = (data) => {
   }
 };
 // Add this to your component
-useEffect(() => {
-  const handleAppStateChange = (nextAppState) => {
-    if (nextAppState === 'active') {
-      // Clear notifications when app comes to foreground
-      PushNotification.removeAllDeliveredNotifications();
-    }
-  };
-  AppState.addEventListener('change', handleAppStateChange);
-  return () => {
-    AppState.removeEventListener('change', handleAppStateChange);
-  };
-}, []);
+// useEffect(() => {
+//   const handleAppStateChange = (nextAppState) => {
+//     if (nextAppState === 'active') {
+//       // Clear notifications when app comes to foreground
+//       PushNotification.removeAllDeliveredNotifications();
+//     }
+//   };
+//   AppState.addEventListener('change', handleAppStateChange);
+//   return () => {
+//     AppState.removeEventListener('change', handleAppStateChange);
+//   };
+// }, []);
    useEffect(() => {
    
     if (!isInitialLoading && chatList.length === 0 && !hasDismissedModal) {
